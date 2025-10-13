@@ -11,7 +11,7 @@ export default function SignUp() {
   const [loading, setLoading] = useState(false);
 
   const { backendUrl, token, setToken } = useContext(Context);
-
+  console.log("ddsjkds",backendUrl)
   const onSubmitHandler = async (event) => {
     event.preventDefault();
     setLoading(true);
@@ -22,9 +22,10 @@ export default function SignUp() {
         console.log(data, "Sign Up");
 
         if (data.success) {
-          localStorage.setItem('token', data.token);
+          // localStorage.setItem('token', data.token);
           setToken(data.token);
           toast.success(data.message);
+          setCurrentState("Login")
         } else {
           toast.error(data.message);
         }
@@ -50,7 +51,7 @@ export default function SignUp() {
 
   return (
     <div>
-      <form  onSubmit={onSubmitHandler}  className='w-full flex flex-col items-center justify-center max-w-7xl mx-auto p-10'>
+      <form onSubmit={onSubmitHandler} className='w-full flex flex-col items-center justify-center max-w-7xl mx-auto p-10'>
         <div className='w-full flex flex-col gap-4 bg-white rounded-2xl shadow-md p-10 max-w-[500px]'>
           <h1 className='text-2xl text-[#444242] font-semibold'>
             {currentState === "Login" ? "Login" : "Create Account"}
