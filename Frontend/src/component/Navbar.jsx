@@ -52,7 +52,7 @@ export default function Navbar() {
             </NavLink>
           </ul>
         </div>
-        <button className=" hidden lg:block px-3 py-2 bg-blue-500 text-white text-sm font-medium rounded" onClick={() => window.open(" http://localhost:5174/", "_blank")} >Admin Panel</button>
+        <button className=" hidden lg:block px-3 py-2 bg-blue-500 text-white text-sm font-medium rounded" onClick={() => window.open("https://healthpoint-appointment-admin.onrender.com", "_blank")} >Admin Panel</button>
          <div className="flex items-center gap-4">
         <div className="md:flex items-center justify-center">
           <div className="flex items-center gap-4">
@@ -111,7 +111,7 @@ export default function Navbar() {
               className={({ isActive }) => `text-black ${isActive ? " border-b-2" : ""}`} onClick={() => setSideBar(!sideBar)}>About</NavLink>
             <NavLink to="Contact"
               className={({ isActive }) => `text-black ${isActive ? "border-b-2" : ""}`} onClick={() => setSideBar(!sideBar)}>Contact</NavLink>
-            <button className=" px-3 py-2 bg-blue-500 text-white text-sm font-medium rounded" onClick={() => window.open("https://healthpoint-appointment-admin.onrender.com/", "_blank")} >Admin Panel</button>
+            <button className=" px-3 py-2 bg-blue-500 text-white text-sm font-medium rounded" onClick={() => window.open("https://healthpoint-appointment-admin.onrender.com", "_blank")} >Admin Panel</button>
 
           </ul>
         </div>
