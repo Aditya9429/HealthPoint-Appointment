@@ -12,9 +12,9 @@ export default function Sidebar() {
     const { atoken, setAToken } = useContext(AdminContext);
     const {dToken} = useContext(DoctorContext)
     return (
-        <div className='min-h-screen min-w-[20%] border-r border-white  bg-white'>
+        <div className='min-h-screen min-w-[20%] border-r border-white  bg-white '>
             {
-                atoken && <ul className='flex flex-col  gap-5  '>
+                atoken && <ul className='flex flex-col  gap-5  ml-7'>
                     <NavLink to={"/admin-dashboard"}  className={({isActive}) => `flex items-center gap-3  px-1 py-2 cursor-pointer ${isActive ? " bg-[#bbbcbb]  border-r-4 border-blue-500 " : ""}`}>
                         <img src={home} />
                         <p className='hidden md:block'>DashBoard</p>
@@ -34,7 +34,7 @@ export default function Sidebar() {
                 </ul>
             }
             {
-                dToken && <ul className='flex flex-col gap-5 '>
+                dToken && <ul className='flex flex-col gap-5 ml-7'>
                     <NavLink to={"/doctor-dashboard"}  className={({isActive}) => `flex items-center gap-3  px-1 py-2 cursor-pointer ${isActive ? " bg-[#bbbcbb]  border-r-4 border-blue-500 " : ""}`}>
                         <img src={home} /> 
                         <p className='hidden md:block'>DashBoard</p>

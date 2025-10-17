@@ -12,19 +12,17 @@ export default function DoctorsList() {
   }, [atoken]);
 
   return (
-    <div className="p-4 sm:p-6 lg:p-8 bg-gray-50 min-h-screen">
+    <div className="w-full p-4 sm:p-6 lg:p-8 bg-gray-50 min-h-screen">
       <p className="text-xl sm:text-2xl font-semibold mb-6 text-gray-800">
         Doctors List
       </p>
 
-      {/* Responsive Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
         {doctors.map((item) => (
           <div
             key={item._id}
             className="border border-gray-200 rounded-2xl bg-white shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
           >
-            {/* Doctor Image */}
             <img
               src={item.image}
               alt={item.name}

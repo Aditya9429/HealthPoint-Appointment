@@ -18,8 +18,9 @@ export default function Navbar() {
   }
   return (
     <div className='flex items-center justify-between p-5'>
-      <div className='flex items-center gap-5'>
-        <img src={logo} />
+      <div className='flex items-center gap-2'>
+        <img src="/images/health.png" className='w-10'/>
+        <p className='text-2xl font-medium'>PulsePoint</p>
         <p>{atoken ? "Admin" : "Doctor"}</p>
       </div>
       <button onClick={logOut} className='bg-blue-400 text-white px-6 py-2 rounded-full'>LogOut</button>

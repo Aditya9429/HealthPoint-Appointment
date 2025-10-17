@@ -18,12 +18,12 @@ export default function Doctors() {
           {doctors.slice(0, 10).map((item) => (
             <div
               key={item._id}
-              className="flex flex-col items-start border border-gray-300 rounded-2xl transition-transform duration-300 hover:-translate-y-2"
+              className="flex flex-col items-start border border-gray-300 rounded transition-transform duration-300 hover:-translate-y-2"
               onClick={() => navigate(`/appointment/${item._id}`)}
             >
               <img
                 src={item.image}
-                className="w-60 h-50 bg-[#EAEFFF] object-cover rounded-t-2xl"
+                className="w-60 h-50 bg-[#EAEFFF] object-cover "
                 alt={item.name}
               />
               <div className="px-5 py-5">

@@ -14,7 +14,7 @@ export default function Dashboard() {
   }, [atoken]);
 
   return (
-    <div className="m-4 md:m-6 lg:m-8">
+    <div className=" w-[70%] m-4 md:m-6 lg:m-8">
       <div
         className="
           grid 
