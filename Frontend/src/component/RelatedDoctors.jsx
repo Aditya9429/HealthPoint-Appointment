@@ -21,7 +21,7 @@ export default function RelatedDoctors({ doc_id, speciality }) {
       <div className='w-full flex flex-col items-center justify-center mx-auto p-10'>
         <h1 className='text-2xl font-medium text-center'>Related Doctors</h1>
         <p className='mt-4 text-sm text-center'>Simply browse through our extensive list of trusted doctors.</p>
-        <div className='  grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10  mt-10'>
+        <div className='  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10  mt-10'>
           {
             relatedDoctor.map((item, index) => (
               <div onClick={() => navigate(`/appointment/${item._id}`)} key={item.id} className=' flex flex-col items-start border border-gray-300 rounded-2xl transition-transform duration-300 hover:-translate-y-2'>

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Header() {
   const navigate = useNavigate()
   return (
-    <div className="px-6 md:px-12 lg:px-20 py-12">
+    <div className="px-6 md:px-12 lg:px-20 py-12 ">
       <div className="w-full flex flex-col lg:flex-row items-center justify-between  max-w-7xl mx-auto bg-[#5F6FFF] rounded p-8 lg:p-16 gap-10">
         
        

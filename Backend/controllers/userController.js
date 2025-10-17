@@ -41,7 +41,12 @@ const registerUser = async (req, res) => {
       });
     const user = await newUser.save();
 
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET_KEY, { expiresIn: "1d" });
+    const token = jwt.sign({
+      id: user._id
+    },
+      process.env.JWT_SECRET_KEY,
+      { expiresIn: "1d" }
+    );
 
     res.status(201).json({
       success: true,
@@ -90,6 +95,7 @@ const loginUser = async (req, res) => {
     });
   }
 };
+
 
 const getProfile = async (req, res) => {
   try {
@@ -163,7 +169,6 @@ const updateProfile = async (req, res) => {
       updateData.image = imageUpload.secure_url;
     }
 
-    // Update user
     const updatedUser = await userModel.findByIdAndUpdate(userId, updateData, { new: true });
 
     res.status(200).json({

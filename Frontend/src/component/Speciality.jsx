@@ -18,7 +18,7 @@ export default function Speciality() {
             <div
               key={item.id}
               className=" flex flex-col items-center gap-2 transition-transform duration-300 hover:-translate-y-2"
-             
+              onClick={() => navigate('/doctor')}
             >
               <img src={item.image} alt={item.speciality} className="w-15 h-20 object-contain" />
               <p className="whitespace-nowrap text-xs text-center">{item.speciality}</p>

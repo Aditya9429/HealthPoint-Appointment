@@ -31,7 +31,7 @@ export default function Doctors() {
                   className={`inline-block w-2 h-2 rounded-full ${item.available ? "bg-green-500" : "bg-gray-500"
                     }`}
                 ></span>
-                <span className="ml-2 text-sm font-medium text-gray-600">
+                <span className="ml-2 text-sm font-medium text-green-600">
                   {item.available ? "Available" : "Not Available"}
                 </span>
 

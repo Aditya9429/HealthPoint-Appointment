@@ -81,8 +81,9 @@ export default function Login() {
   return (
     <form onSubmit={OnSubmitHandler} className="min-h-[80vh] flex items-center">
       <div className="flex flex-col gap-3 m-auto items-start p-8 min-w-[340px] sm:min-w-[340px] bg-white rounded shadow-2xl">
-        <p className="text-2xl font-semibold m-auto">
-          <span className="text-primary">{state} Login</span>
+        <p className="flex items-center gap-1 text-2xl font-semibold m-auto">
+          <span className=" text-blue-500 bg-pink ">{state} </span>
+          <span>Login</span>
         </p>
 
         <div className="w-full">
