@@ -40,8 +40,8 @@ export default function Appointment() {
       currency: order.currency,
       name: 'Appointment Payment',
       order_id: order.id,
-      receipt: order.receipt,
       handler: async (response) => {
+        console.log(response, "hellll")
         try {
           const { data } = await axios.post(backendUrl + '/api/user/verifyRazorpay', response, { headers: { Authorization: `Bearer ${token}` } });
           if (data.success) {
@@ -55,19 +55,21 @@ export default function Appointment() {
 
       }
     }
-    const rzp = window.Razorpay(options);
-    rzp.open()
+    const rzp = new window.Razorpay(options);
+    rzp.open();
   }
 
   const appointmentRazorPay = async (appointmentId) => {
     try {
-      const { data } = await axios.post(backendUrl + '/api/user/payment-razorpay', { appointmentId }, { headers: { Authorization: `Bearer ${token}` } })
+      const { data } = await axios.post(backendUrl + "/api/user/payment-razorpay", { appointmentId }, { headers: { Authorization: `Bearer ${token}` } })
+      console.log("raxordaa", data);
       if (data.success) {
-        console.log(data.order);
+        console.log(data.order, "roder")
+        initPay(data.order);
       }
     }
     catch (error) {
-      console.log(error);
+      console.log(error.message, "error");
     }
   }
 
@@ -145,13 +147,13 @@ export default function Appointment() {
                   {/* Buttons */}
                   <div className="flex flex-col gap-3 justify-end">
                     {!item.cancelled && item.payment && !item.isCompleted && <button className="sm:min-w-48 py-2 border rounded text-stone-500 bg">Paid</button>}
-                    {!item.cancelled && !item.payment &&  !item.isCompleted && <button className="border border-gray-400 py-2 text-sm font-medium text-gray-500 rounded hover:bg-blue-400 transition-all duration-300 hover:text-white" onClick={() => appointmentRazorPay(item._id)}>
+                    {!item.cancelled && !item.payment && !item.isCompleted && <button className="border border-gray-400 py-2 text-sm font-medium text-gray-500 rounded hover:bg-blue-400 transition-all duration-300 hover:text-white" onClick={() => appointmentRazorPay(item._id)}>
                       Pay Online
                     </button>}
-                    {!item.cancelled &&   !item.isCompleted &&<button onClick={() => cancelAppointment(item._id)} className="border border-gray-400 px-3 py-2 text-sm font-medium rounded text-gray-500 hover:bg-red-500 transition-all duration-300 hover:text-white">
+                    {!item.cancelled && !item.isCompleted && <button onClick={() => cancelAppointment(item._id)} className="border border-gray-400 px-3 py-2 text-sm font-medium rounded text-gray-500 hover:bg-red-500 transition-all duration-300 hover:text-white">
                       Cancel Appointment
                     </button>}
-                    {item.cancelled &&   !item.isCompleted &&<button className="sm:min-w-48 py-2 border border-red-500 text-red-500">Appointment Cancelled</button>}
+                    {item.cancelled && !item.isCompleted && <button className="sm:min-w-48 py-2 border border-red-500 text-red-500">Appointment Cancelled</button>}
                     {item.isCompleted && <button className="sm:min-w-48 py-2 border border-green-500 text-green-500">Completed</button>}
                   </div>
                 </div>

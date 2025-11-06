@@ -15,7 +15,7 @@ const changeAvailability = async (req, res) => {
     }
 };
 
-// List all doctors
+
 const doctorList = async (req, res) => {
     try {
         const doctors = await doctorModel.find({}).select('-password -email');

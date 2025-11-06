@@ -19,7 +19,7 @@ export default function RelatedDoctors({ doc_id, speciality }) {
   return (
     <div>
       <div className='w-full flex flex-col items-center justify-center mx-auto p-10'>
-        <h1 className='text-2xl font-medium text-center'>Related Doctors</h1>
+        <h1 className='text-4xl font-medium text-center'>Related Doctors</h1>
         <p className='mt-4 text-sm text-center'>Simply browse through our extensive list of trusted doctors.</p>
         <div className='  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10  mt-10'>
           {
