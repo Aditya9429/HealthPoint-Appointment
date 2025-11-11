@@ -65,13 +65,17 @@ export default function AllDoctors() {
                     className="w-60 h-50 bg-[#EAEFFF] object-cover rounded-t-2xl"
                   />
                   <div className="px-5 py-5">
-                    <p className="flex items-center gap-1 text-green-400">
-                      <span className="text-2xl">•</span> Available
-                    </p>
-                    <p className="text-[17px] font-medium text-[#262626]">
+                      <span
+                  className={`inline-block w-2 h-2 rounded-full ${item.available ? "bg-green-500" : "bg-gray-500"
+                    }`}
+                ></span>
+                <span className="ml-2 text-sm font-medium text-green-600">
+                  {item.available ? "Available" : "Not Available"}
+                </span>
+                    <p className="text-[17px] font-bold text-[#262626]">
                       {item.name}
                     </p>
-                    <p className="text-[15px] text-gray-400 font-medium">
+                    <p className="text-[15px] text-gray-500 font-medium">
                       {item.speciality}
                     </p>
                   </div>

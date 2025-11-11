@@ -1,6 +1,9 @@
 @import 'tailwindcss';
+
 * {
-  font-family: "Quicksand", sans-serif;
+font-family: 'Montserrat', sans-serif;
+
+
 }
 
 ::-webkit-scrollbar {

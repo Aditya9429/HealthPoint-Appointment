@@ -18,7 +18,7 @@ export default function Doctors() {
           {doctors.slice(0, 10).map((item) => (
             <div
               key={item._id}
-              className="flex flex-col items-start border border-gray-300 rounded transition-transform duration-300 hover:-translate-y-2"
+              className="flex flex-col items-start border border-gray-300 rounded-2xl transition-transform duration-300 hover:-translate-y-2"
               onClick={() => navigate(`/appointment/${item._id}`)}
             >
               <img
@@ -35,7 +35,7 @@ export default function Doctors() {
                   {item.available ? "Available" : "Not Available"}
                 </span>
 
-              <p className="text-[17px] font-medium text-[#262626] mt-2">{item.name}</p>
+              <p className="text-[17px] font-bold text-[#262626] mt-2">{item.name}</p>
 
                 <p className="text-[15px] text-gray-400 font-medium">{item.speciality}</p>
               </div>

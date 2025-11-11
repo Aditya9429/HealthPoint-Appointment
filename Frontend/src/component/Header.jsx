@@ -17,7 +17,7 @@ export default function Header() {
           <p className="text-base sm:text-lg font-medium text-white max-w-md mx-auto lg:mx-0">
             Simply browse through our extensive list of trusted doctors and schedule your appointment hassle-free
           </p>
-          <p className="flex items-center justify-center lg:justify-start gap-2 px-4 py-3 text-black text-sm sm:text-base text-center bg-white rounded-full max-w-[220px] mx-auto lg:mx-0 cursor-pointer hover:bg-[#e2e2e2] transition">
+          <p className="flex items-center justify-center lg:justify-start gap-2 px-4 py-3 text-black text-sm sm:text-base text-center bg-white rounded-full max-w-[220px] mx-auto lg:mx-0 cursor-pointer hover:bg-[#e2e2e2] transition" onClick={() => navigate('/doctor')}>
             Book Appointment <span><LuMoveRight /></span>
           </p>
         </div>

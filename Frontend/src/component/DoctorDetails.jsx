@@ -126,7 +126,7 @@ export default function DoctorDetails() {
             <img
               src={doctor.image}
               alt={doctor.name}
-              className="w-full h-68 object-cover rounded"
+              className="w-full h-72 object-cover rounded"
             />
           </div>
         </div>
