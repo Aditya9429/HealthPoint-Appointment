@@ -47,7 +47,7 @@ export default function Dashboard() {
             transition-all duration-300
           "
         >
-          <img src={assets.appointments_icoan} alt="appointment icon" className="w-14 h-14" />
+          <img src={assets.appointments_icon} alt="appointment icon" className="w-14 h-14" />
           <div>
             <p className="text-xl font-semibold text-gray-700">
               {dashData?.appointments || 0}
