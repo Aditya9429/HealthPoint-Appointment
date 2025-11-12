@@ -41,7 +41,7 @@ export default function AllDoctors() {
                 }
               >
                 <p
-                  className={`lg:w-[13vw] border border-gray-300 px-4 py-2 text-sm  font-medium rounded cursor-pointer ${
+                  className={`lg:w-[13vw] border border-gray-300 px-4 py-2 text-sm text-gray-900 font-semibold rounded cursor-pointer ${
                     currentSpeciality === item.speciality ? "bg-gray-300" : ""
                   }`}
                 >

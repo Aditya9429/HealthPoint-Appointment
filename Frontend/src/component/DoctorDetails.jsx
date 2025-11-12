@@ -149,13 +149,13 @@ export default function DoctorDetails() {
                 </span>
               </div>
               <div>
-                <div className="flex items-center gap-2">
-                  <h2 className="text-sm font-semibold text-gray-800 mb-3">About</h2>
+                <div className="flex items-center  gap-2 mb-2">
+                  <h2 className="text-sm font-semibold text-gray-800 ">About</h2>
                   <img src="/images/info_icon.svg" alt="info" />
                 </div>
                 <p className="text-gray-600 text-sm">{doctor.about}</p>
               </div>
-              <p className="text-lg font-medium text-gray-600">
+              <p className="text-lg font-bold text-gray-700">
                 Appointment fee: ₹{doctor.fees}
               </p>
             </div>

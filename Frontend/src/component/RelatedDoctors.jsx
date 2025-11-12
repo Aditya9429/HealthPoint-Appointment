@@ -35,7 +35,7 @@ export default function RelatedDoctors({ doc_id, speciality }) {
                     {item.available ? "Available" : "Not Available"}
                   </span>
 
-                  <p className="text-[17px] font-medium text-[#262626] mt-2">{item.name}</p>
+                  <p className="text-[17px] font-bold text-[#262626] mt-2">{item.name}</p>
 
                   <p className="text-[15px] text-gray-400 font-medium">{item.speciality}</p>
                 </div>

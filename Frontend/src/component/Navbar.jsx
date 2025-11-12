@@ -24,12 +24,13 @@ export default function Navbar() {
   return (
     <nav className="relative w-full flex flex-col items-center bg-white z-99 mt-4">
       <div className="md:w-[80%] w-[92%] flex items-center justify-between my-4 ">
-        <div>
+        <div className="flex items-center gap-1">
+          <img src="/images/health.png" alt="" className="w-8 h-8 object-cover" />
           <h1 className="text-3xl font-bold text-[#000069]">PulsePoint</h1>
         </div>
 
         <div className=" md:block hidden">
-          <ul className="w-full flex text-[17px] items-center justify-evenly gap-10 link-active font-medium">
+          <ul className="w-full flex text-[17px] items-center justify-evenly gap-10 link-active font-semibold">
             <NavLink to="/"
               className={({ isActive }) => `text-black  ${isActive ? "bg-blue-500 px-3 py-1 rounded text-white duration-300 transition-all" : ""}`}
             >
